@@ -1,0 +1,629 @@
+/*
+||||================================================||||
+||||================================================||||
+||||    Love Calculator Scrupt By Mohammed Cha      ||||
+||||================================================||||
+||||================================================||||
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #999999;
+	word-wrap:break-word;
+	background: #f23c3c;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #fff;
+  	max-width: 80%;
+	margin: 1em auto;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f23c3c;
+  color: #fff;
+}
+
+.topnav .selected {
+  background-color: #f2f2f2;
+  color: #af0000;
+  box-shadow: 0px -2px 0px #9c0101 inset;
+  box-shadow: 0px 2px 0px #9c0101 inset;
+}
+
+.topnav .home {
+  background-color: #af0000;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.topnav .home:hover {
+  background-color: #9c0101;
+  color: #fff;
+}
+
+.topnav .icon {
+  display: none;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.container {
+	background: #fff;
+	max-width: 80%;
+	margin: 1em auto;
+	border-radius: 4px;
+	 padding: 1em;
+}
+
+.pages {
+	padding: 1.3em;
+	font-size: 1.3em;
+	line-height: 1.8em;
+	color: #333;
+}
+
+.pages h2 {
+	padding-bottom: 1em;
+	text-align: center;
+	font-size: 2em;
+	color: #333;
+}
+
+.pages ul{
+	padding: 1em 2em;
+	color: #666;
+}
+
+
+
+.share {
+  width: 100%;
+  padding: 0.9em;
+  background:#3C5898;
+  color: #fff;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  text-align:center;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.share:hover {
+  background:#2b4683;
+  color: #fff;
+}
+
+.more {
+  width: 100%;
+  margin-top:0.5em;
+  padding: 0.9em;
+  position: relative;
+  background:#51ac0e;
+  color: #fff;
+  font-size: 1em;
+  text-align:center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.more:hover {
+  background:#71d60e;
+  color: #fff;
+}
+
+.more a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+	font-size:2em;
+	color:#ad1414;
+	font-weight: 900;
+	letter-spacing: 2px;
+	padding: 0.5em;
+	text-align: center;
+}
+
+h2 {
+	font-size:1.5em;
+	color:#f23c3c;
+	font-weight: 900;
+	letter-spacing: 2px;
+	padding: 0.5em;
+	text-align: center;
+}
+
+h3 {
+	font-size:2em;
+	color:#f23c3c;
+	font-weight: 900;
+	letter-spacing: 2px;
+	padding: 0.5em;
+	text-align: center;
+	background: #ffd3d3;
+	margin: 0.5em;
+}
+
+h3 span{
+	font-size:0.8em;
+	color:#333;
+	font-weight: 900;
+	letter-spacing: 2px;
+	padding: 0.5em;
+	text-align: center;
+}
+
+
+.names  {
+	font-size: 1.5em;
+	color:#f23c3c;
+
+}
+
+.names span {
+	font-size: 1em;
+	color:#333;
+
+}
+
+.intro {
+	text-align:center;
+}
+
+.intro p {
+	font-size:1em;
+	letter-spacing: 2px;
+	padding:1em;
+}
+
+.outro {
+  display: grid;
+  grid-template-columns: 29% auto;
+  grid-gap: 10px;
+  background-color: #fff;
+  border-top: 1px solid #c6c6c6;
+  padding-top: 1em;
+  color: #444;
+  margin-top:1em;
+   margin-bottom:1em;
+   border-radius: 4px;
+}
+
+/* 868 */
+@media (min-width: 481px) and (max-width: 868px) {
+  
+	.outro {
+	  display: grid;
+	  grid-template-columns: 90%;
+	}
+  
+}
+
+.partone img{
+  text-align:right;
+}
+
+.outro p {
+	font-size:1em;
+	letter-spacing: 2px;
+	padding:1em;
+	text-align: justify;
+}
+
+.form-holder {
+  width: 100%;
+  margin: 1em auto 0;
+  padding: 1em;
+  position: relative;
+  text-align: center;
+  background: #fff7f7;
+}
+
+.form-holder input {
+  min-width: 49.5%;
+  margin: 1em auto 0;
+  padding: 1em;
+  border:1px solid #f7b4b4;
+  position: relative;
+  border-radius: 4px;
+  background: #fff url(../assets/user.png) no-repeat scroll 7px 9px;
+  padding-left:50px;
+  font-size: 1em;
+}
+
+.form-holder .calc {
+  width: 100%;
+  padding: 0.9em;
+  position: relative;
+  background:#f40000;
+  color: #fff;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.form-holder .calc:hover {
+  background:#c10000;
+  color: #fff;
+}
+
+#coutput  {
+	padding-top:0.5em;
+}
+
+#coutput .more {
+  width: 100%;
+  padding: 0.9em;
+  position: relative;
+  background:#51ac0e;
+  color: #fff;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#coutput .more:hover {
+  background:#71d60e;
+  color: #fff;
+}
+
+#coutput .share {
+  width: 100%;
+  padding: 0.9em;
+  position: relative;
+  background:#3c5898;
+  color: #fff;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin:0.5em 0.1em;
+}
+
+#coutput .share:hover {
+  background:#2b4683;
+  color: #fff;
+}
+
+
+#coutput p {
+	background:#fcf2c8;
+	border: #efde9a 1px solid;
+	padding: 1em;
+	border-radius: 4px;
+	text-align: center;
+	color: #786413;
+}
+
+#coutput .calcgo {
+	background:#dbffcb;
+	border: #c0faa7 1px solid;
+	padding: 1em;
+	border-radius: 4px;
+	text-align: center;
+	color: #678613;
+	width: 100%;
+}
+
+
+
+
+.guage-holder {
+  width: 420px;
+  margin: 1em auto 0;
+  position: relative;
+  text-align: center;
+}
+
+.circle-mask {
+  width: 420px;
+  height: 206px;
+  padding: 5px 10px 0;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.circle, .circle-inner {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  position: relative;
+}
+
+.circle-inner {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #f40000;
+  border-left: 10px solid #f40000;
+  transition: .3s ease-in-out;
+  transform: rotate(-45deg);
+}
+
+.circle-inner:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid #f40000;
+  left: 43px;
+  top: 44px;
+}
+
+.percentage {
+  margin: 20px 0;
+  padding: 10px;
+  background:#f40000;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.8em;
+  border-radius: 4px;
+}
+
+.text-box {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  padding: 0 10px;
+  color: #666;
+}
+
+.gauge-copy {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  background: #32324e;
+  top: 71%;
+  left: 50%;
+  transition: .3s ease-in-out;
+  transform: translate(-50%, -50%) rotate(0deg);
+  margin: 8px 0 0;
+}
+
+.gauge-copy:after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e53737;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.gauge-copy:before {
+  content: "";
+  position: absolute;
+  border: 7px solid transparent;
+  border-right: 160px solid #32324e;
+  left: -165px;
+  top: 8px;
+  width: 0;
+  height: 0;
+}
+
+
+
+@media (min-width: 181px) and (max-width: 868px) {
+	h1 {
+	font-size:1.2em;
+	color:#ad1414;
+	font-weight: 900;
+	letter-spacing: 2px;
+	padding: 0.5em;
+	text-align: center;
+	}	
+	
+
+	input { width: 100%; font-size:0.6em; }
+
+	.guage-holder {
+	  width: 220px;
+	  margin: 1em auto 0;
+	  position: relative;
+	  text-align: center;
+	}
+
+	.circle-mask {
+	  width: 220px;
+	  height: 106px;
+	  padding: 5px 10px 0;
+	  border-bottom: 1px solid #ccc;
+	  position: relative;
+	  text-align: center;
+	  overflow: hidden;
+	}
+
+	.circle, .circle-inner {
+	  width: 200px;
+	  height: 200px;
+	  border-radius: 50%;
+	  border: 10px solid #ccc;
+	  position: relative;
+	}
+
+	.circle-inner {
+	  position: absolute;
+	  top: -10px;
+	  left: -10px;
+	  border: 10px solid transparent;
+	  border-bottom: 10px solid #f40000;
+	  border-left: 10px solid #f40000;
+	  transition: .3s ease-in-out;
+	  transform: rotate(-45deg);
+	}
+
+	.circle-inner:after {
+	  content: "";
+	  position: absolute;
+	  width: 10px;
+	  height: 10px;
+	  border-radius: 50%;
+	  background: white;
+	  border: 4px solid #f40000;
+	  left: 13px;
+	  top: 14px;
+	}
+
+	.percentage {
+	  margin: 20px 0;
+	  padding: 10px;
+	  background:#f40000;
+	  font-weight: bold;
+	  color: #fff;
+	  font-size: 1.8em;
+	  border-radius: 4px;
+	}
+
+	.text-box {
+	  width: 60px;
+	  height: 30px;
+	  text-align: center;
+	  padding: 0 10px;
+	  color: #666;
+	}
+
+	.gauge-copy {
+	  width: 30px;
+	  height: 30px;
+	  border-radius: 50%;
+	  position: absolute;
+	  background: #32324e;
+	  top: 55%;
+	  left: 50%;
+	  transition: .3s ease-in-out;
+	  transform: translate(-50%, -50%) rotate(0deg);
+	  margin: 8px 0 0;
+	}
+
+	.gauge-copy:after {
+	  content: "";
+	  position: absolute;
+	  width: 22px;
+	  height: 22px;
+	  border-radius: 50%;
+	  background: #e53737;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%,-50%);
+	}
+
+	.gauge-copy:before {
+	  content: "";
+	  position: absolute;
+	  border: 7px solid transparent;
+	  border-right: 90px solid #32324e;
+	  left: -80px;
+	  top: 8px;
+	  width: 0;
+	  height: 0;
+	}
+
+}
+
+footer {
+	width:100%;
+	text-align:center;
+	padding:1em;
+	margin: 1em 0em;
+}
+
+.footer a {
+	color: #fff;
+	font-size: 1em;
+	text-decoration: none;
+	padding:0 1em;
+}
+
+.footer p {
+	color: #fff;
+	font-size: 1em;
+	text-decoration: none;
+	padding:1em 0em;
+}
+
+.footer p a {
+	color: #fff;
+	padding: 0em;
+}
+
+.footer p span {
+	color: #2d0100;
+}
+
+.footer a:hover {
+	color: #640404;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+/*
+||||================================================||||
+||||================================================||||
+||||    Love Calculator Scrupt By Mohammed Cha      ||||
+||||================================================||||
+||||================================================||||
+*/
